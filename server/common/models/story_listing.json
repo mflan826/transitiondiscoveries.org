@@ -1,0 +1,65 @@
+{
+  "name": "story_listing",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "string",
+      "required": true
+    },
+    "video_link": {
+      "type": "string"
+    },
+    "publish_date": {
+      "type": "date"
+    },
+    "author": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array"
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "upload": {
+      "accepts": [
+        {
+          "arg": "req",
+          "type": "object",
+          "required": true,
+          "description": "Request Object",
+          "http": {
+            "source": "req"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "res",
+          "type": "object"
+        }
+      ],
+      "description": "Method for upload images to AWS S3 bucket.",
+      "http": [
+        {
+          "path": "/upload",
+          "verb": "post"
+        }
+      ]
+    }
+  }
+}

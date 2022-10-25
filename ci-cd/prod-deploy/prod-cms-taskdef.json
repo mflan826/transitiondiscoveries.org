@@ -1,0 +1,35 @@
+[
+  {
+    "name": "cms",
+    "image": "581641538996.dkr.ecr.us-east-1.amazonaws.com/cms:latest",
+    "memoryReservation": 512,
+    "portMappings": [
+      {
+        "containerPort": 3001,
+        "hostPort": 0,
+        "protocol": "tcp"
+      }
+      
+    ],
+   "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "/ecs/cms-prod",
+        "awslogs-region": "us-east-1",
+        "awslogs-stream-prefix": "ecs"
+        }
+    },
+    "environment": [
+      {
+          "name": "S3_BUCKET_NAME",
+          "value": "resources.transitiondiscoveries.org"
+      },
+      {
+        "name": "NODE_ENV",
+        "value": "production"
+      }
+      
+    ]
+  }
+
+ ]

@@ -1,0 +1,67 @@
+{
+  "name": "subIndicators",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "indicator_id": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "iconImageName": {
+      "type": "string"
+    },
+    "imageName": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "upload": {
+      "accepts": [
+        {
+          "arg": "req",
+          "type": "object",
+          "required": true,
+          "description": "Resquest Object",
+          "http": {
+            "source": "req"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "object",
+          "root": true,
+          "description": "Returns a object with the details of the uploaded file."
+        }
+      ],
+      "description": "Method for upload files to AWS S3 bucket.",
+      "http": [
+        {
+          "path": "/upload",
+          "verb": "post"
+        }
+      ]
+    }
+  }
+}

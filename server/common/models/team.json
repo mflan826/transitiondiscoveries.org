@@ -1,0 +1,206 @@
+{
+    "name": "team",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+      "validateUpsert": true
+    },
+    "properties": {
+      "TeamMemberName": {
+          "type":"string",
+          "required":true
+      },
+      "TeamMemberJobTitle": {
+          "type":"string",
+          "required":true
+      },
+      "bio_content": {
+        "type": "string",
+        "required": true
+      },
+      "bio_content2": {
+        "type": "string",
+        "required": true
+      },
+      "bio_content3": {
+        "type": "string",
+        "required": true
+      },
+      "slug": {
+        "type": "string",
+        "required": true
+
+      },
+      "src": {
+        "type": "string"
+
+      },
+      "TeamMemberImage": {
+        "type": "object",
+        "required": true
+      },
+      "fbLink": {
+        "type": "string"
+      },
+      "twLink": {
+        "type": "string"
+      },
+      "InstaLink": {
+        "type": "string"
+      },
+      "LinkedInLink": {
+        "type": "string"
+      }
+
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {
+
+      "upload": {
+        "accepts": [
+          {
+            "arg": "req",
+            "type": "object",
+            "required": true,
+            "description": "Resquest Object",
+            "http": {
+              "source": "req"
+            }
+          }
+        ],
+        "returns": [
+          {
+            "arg": "res",
+            "type": "string"
+          }
+        ],
+        "description": "Method for upload images to AWS S3 bucket.",
+        "http": [
+          {
+            "path": "/upload",
+            "verb": "post"
+          }
+        ]
+      },
+      "publish": {
+        "accepts": [
+          {
+            "arg": "req",
+            "type": "object",
+            "required": true,
+            "description": "Resquest Object",
+            "http": {
+              "source": "req"
+            }
+          }
+        ],
+        "returns": [
+          {
+            "arg": "res",
+            "type": "string"
+          }
+        ],
+        "description": "Method for publish in team.",
+        "http": [
+          {
+            "path": "/publish",
+            "verb": "post"
+          }
+        ]
+      },
+      "updateTeamMemberData": {
+        "accepts": [
+          {
+            "arg": "data",
+            "type": "body",
+            "required": true,
+            "description": "data to be updated",
+            "http": {
+              "source": "req"
+            }
+          }
+        ],
+        "returns": [
+          {
+            "arg": "data",
+            "type": "object"
+          }
+        ],
+        "description": "Method to update team data",
+        "http": [
+          {
+            "path": "/updateTeamData",
+            "verb": "put"
+          }
+        ]
+      },
+      "deleteTeamMemberData": {
+        "accepts": [
+          {
+            "arg": "id",
+            "required": true,
+            "description": "team record id"
+          }
+        ],
+        "returns": [
+          {
+            "arg": "data",
+            "type": "object"
+          }
+        ],
+        "description": "Method to update team data",
+        "http": [
+          {
+            "path": "/:id",
+            "verb": "delete"
+          }
+        ]
+      },
+      "teamData": {
+        "accepts": [
+          {
+            "arg": "id",
+            "type": "string",
+            "required": true,
+            "description": "team record id"
+          }
+        ],
+        "returns": [
+            {
+              "arg": "data",
+              "type": "object",
+              "root": true,
+              "description": "Returns an object with the details of the team."
+            }
+          ],
+        "description": "Method for fetch data of team member.",
+        "http": [
+          {
+            "path": "/:id",
+            "verb": "get"
+          }
+        ]
+      },
+      "getAllTeamData": {
+
+        "returns": [
+            {
+              "arg": "data",
+              "type": "object",
+              "root": true,
+              "description": "Returns an object with the details of the team."
+            }
+          ],
+        "description": "Method for fetch data of team member.",
+        "http": [
+          {
+            "path": "/all",
+            "verb": "get"
+          }
+        ]
+      }
+    }
+
+  }

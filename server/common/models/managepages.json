@@ -1,0 +1,45 @@
+{
+  "name": "managepages",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "PageName": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "teamData": {
+      "accepts": [
+        {
+          "arg": "id",
+          "type": "string",
+          "required": true,
+          "description": "team record id"
+        }
+      ],
+      "returns": [
+          {
+            "arg": "PageName",
+            "type": "object",
+            "root": true,
+            "description": "Returns an object with the details of the team."
+          }
+        ],
+      "description": "Method for fetch data of team member.",
+      "http": [
+        {
+          "path": "/:id/page",
+          "verb": "get"
+        }
+      ]
+    }
+  }
+}
+
+

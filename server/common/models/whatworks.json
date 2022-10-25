@@ -1,0 +1,50 @@
+{
+  "name": "whatworks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "publish": {
+      "accepts": [
+        {
+          "arg": "id",
+          "type": "string",
+          "required": true,
+          "description": "whatworks id"
+        }
+      ],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "object",
+          "root": true,
+          "description": "Returns an object with the details of the uploaded file."
+        }
+      ],
+      "description": "Method to publish data to website.",
+      "http": [
+        {
+          "path": "/:id/publish",
+          "verb": "post"
+        }
+      ]
+    }
+  }
+}

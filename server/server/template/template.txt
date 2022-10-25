@@ -1,0 +1,59 @@
+{
+  "Banner": {
+    "breadcrumbLink": "Team",
+    "heading": "The Transition Discoveries Team",
+    "text": "We have an amazing team, with shared values of TD.  We believe in a youth-led, youth driven model of transition.  Relationships and collaboration are the key to the success of building and expanding communities. ",
+    "imageName": "Team-Banner-Right-Image.png",
+    "link": { "url": "/get-connected", "text": "Join Now" }
+  },
+  "TeamMembers": {
+    "heading": "The Transition Discoveries Team",
+    "subheading": "Our team members believe in Your Voice. Youth Story. Your Future. We value the voices of young people with disabilities, families, and transition stakeholders in our collaborative work with communities.  Our goals are to help communities build strong relationships and to use data-driven action planning to learn",
+    "Team":${Team}
+  },
+  "ImageAndDescriptionRow": {
+    "imageName": "team-left.png",
+    "heading": "Success after High School is a Team Effort",
+    "content": "We provide opportunities to build a network of connections built on strong community relationships. This foundation leads to collaboration where everyone plays an equal role in leadership to use data-driven community action planning to identify what’s working in their communities. Ready to link up with our growing network of community leaders?",
+    "link": { "url": "/get-connected", "text": "Join Now" }
+  },
+  "PartnersList": {
+    "heading": "Our Partners",
+    "subheading": "Our success depends on our growing web of partnerships between young people with disabilities, families and stakeholders working in schools, agencies and organizations throughout communities. ",
+    "PartnersLeftBoxImg": "ProjectsLeftBoxImg.png",
+    "LeftBoxDesc": "Through the power of our partnerships, we work to support communities through resource development, data-driven community action planning and local leadership teams of young people with disabilities, families and stakeholders.",
+    "TabTitle1": "Schools",
+    "Tabdata1": [
+      {
+        "image": "School/Logos-1.jpg"
+      },
+      {
+        "image": "School/Logos-2.jpg"
+      },
+      {
+        "image": "School/Logos-3.jpg"
+      },
+      {
+        "image": "School/Logos-4.jpg"
+      }
+    ],
+    "TabTitle2": "Organizations",
+    "Tabdata2": [
+      {
+        "image": "Organizations/Logos-1.jpg"
+      },
+      {
+        "image": "Organizations/Logos-2.jpg"
+      },
+      {
+        "image": "Organizations/Logos-3.jpg"
+      }
+    ]
+  },
+  "BecomePartner": {
+    "BecomePartnerLeft": "BecomePartnerLeft.png",
+    "JoinUsText": "Interested in Joining the TD Initiative",
+    "ProjectLinkText": "Join Now",
+    "ProjectLink1": "/get-connected"
+  }
+}

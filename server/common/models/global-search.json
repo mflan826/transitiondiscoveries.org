@@ -1,0 +1,45 @@
+{
+  "name": "globalSearch",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": { 
+    "key": "" 
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": { 
+    "search": {
+      "accepts": [
+        {
+          "arg": "key",
+          "type": "object",
+          "required": true,
+          "description": "Resquest Object",
+          "http": {
+            "source": "req"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "object",
+          "root": true,
+          "description": "Returns a object with filtered data."
+        }
+      ],
+      "description": "Method for filter.",
+      "http": [
+        {
+          "path": "/search",
+          "verb": "get"
+        }
+      ]
+    }
+  }
+}
+  

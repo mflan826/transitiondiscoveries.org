@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "10.0.20.177",
+    "port": 27017,
+    "url": false,
+    "database": "td-admin",
+    "password": "",
+    "name": "db",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

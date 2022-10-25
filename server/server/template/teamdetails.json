@@ -1,0 +1,15 @@
+{
+    "Banner": {
+      "breadcrumbLink": "Team",
+      "TeamMemberName": "${name}",
+      "TeamMemberJobTitle": "${title}",
+      "TeamMemberImage": "${image}",
+      "TeamMemberbio": "${biocontent}",
+      "TeamMemberbio2": "${biocontent2}",
+      "TeamMemberbio3":"${biocontent3}",
+      "slug": "${slug}",
+      "fbLink": "${fb}",
+      "twLink": "${twitter}",
+      "InstaLink": "${instagram}"
+    }
+  }

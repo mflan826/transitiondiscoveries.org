@@ -1,0 +1,86 @@
+{
+  "name": "resources",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "path": {
+      "type": "string"
+    },
+    "thumbnailPath": {
+      "type": "string"
+    },
+    "contenttype": {
+      "type": "string"
+    },
+    "indicator": {
+      "type": "array",
+      "required": true
+    },
+    "subindicator": {
+      "type": "array",
+      "required": true
+    },
+    "preemploymenttransitionservices": {
+      "type": "array",
+      "required": true
+    },
+    "resourcetypes": {
+      "type": "array",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array"
+    },
+    "facilitators": {
+      "type": "array",
+      "required": true
+    },
+    "targetaudience": {
+      "type": "array",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "upload": {
+      "accepts": [
+        {
+          "arg": "req",
+          "type": "object",
+          "required": true,
+          "description": "Resquest Object",
+          "http": {
+            "source": "req"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "object",
+          "root": true,
+          "description": "Returns a object with the details of the uploaded file."
+        }
+      ],
+      "description": "Method for upload files to AWS S3 bucket.",
+      "http": [
+        {
+          "path": "/upload",
+          "verb": "post"
+        }
+      ]
+    }
+  }
+}

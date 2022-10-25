@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "user": {
+    "dataSource": "db",
+    "public": true
+  },
+  "contactus": {
+    "dataSource": "db",
+    "public": true
+  },
+  "resources": {
+    "dataSource": "db",
+    "public": true
+  },
+  "indicators": {
+    "dataSource": "db",
+    "public": true
+  },
+  "subIndicators": {
+    "dataSource": "db",
+    "public": true
+  },
+  "whatworks": {
+    "dataSource": "db",
+    "public": true
+  },
+  "whatworkstest": {
+    "dataSource": "db",
+    "public": true
+  },
+  "blog": {
+    "dataSource": "db",
+    "public": true
+  },
+  "event": {
+    "dataSource": "db",
+    "public": true
+  },
+  "story_listing": {
+    "dataSource": "db",
+    "public": true
+  },
+  "team": {
+    "dataSource": "db",
+    "public": true
+  },
+  "managepages": {
+    "dataSource": "db",
+    "public": true
+  },
+  "globalSearch": {
+    "dataSource": null,
+    "public": true
+  }
+}
